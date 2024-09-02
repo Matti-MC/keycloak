@@ -15,6 +15,12 @@ textarea.pf-c-form-control {
 	height: auto;
 }
 
+.pf-c-form-control {
+	height: auto;
+    	min-width: 20%;
+    	max-width: 100%;
+}
+
 .pf-c-alert__title {
     font-size: var(--pf-global--FontSize--xs);
 }
