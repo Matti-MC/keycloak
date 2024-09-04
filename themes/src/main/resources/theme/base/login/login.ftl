@@ -11,10 +11,12 @@
                         <div class="${properties.kcFormGroupClass!}">
                             <label for="username" class="${properties.kcLabelClass!}"><#if !realm.loginWithEmailAllowed>${msg("username")}<#elseif !realm.registrationEmailAsUsername>${msg("usernameOrEmail")}<#else>${msg("email")}</#if></label>
 
-                            <input tabindex="2" id="username" class="${properties.kcInputClass!}" name="username" value="${(login.username!'')}"  type="text" autofocus autocomplete="username"
-                                   aria-invalid="<#if messagesPerField.existsError('username','password')>true</#if>"
-                                   dir="ltr"
-                            />
+                            <div class="${properties.kcInputGroup!}" dir="ltr"> 
+                                <input tabindex="2" id="username" class="${properties.kcInputClass!}" name="username" value="${(login.username!'')}"  type="text" autofocus autocomplete="username"
+                                       aria-invalid="<#if messagesPerField.existsError('username','password')>true</#if>"
+                                       dir="ltr"
+                                />
+                            </div>
 
                             <#if messagesPerField.existsError('username','password')>
                                 <span id="input-error" class="${properties.kcInputErrorMessageClass!}" aria-live="polite">
